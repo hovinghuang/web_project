@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
         DBUtil db = new DBUtil();//构建数据库对象
         boolean canLogin =  db.loginSuccess(username, password);
         if(canLogin){//根据登陆情况，跳转页面
-        response.sendRedirect("success.html");
+        response.sendRedirect("home.html");
         }else{
         response.sendRedirect("login.html");
         }

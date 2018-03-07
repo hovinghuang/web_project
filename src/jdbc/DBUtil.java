@@ -37,8 +37,11 @@ public class DBUtil {
 
 		try {
 			conn = getConnection();
+			System.out.println("conn:" + conn);
 			stmt = conn.createStatement();
+			System.out.println("stmt:" + stmt);
 			rs = stmt.executeQuery(sql);
+			System.out.println("rs:" + rs);
 			while (rs.next()) {
 				String userNameInDB = rs.getString("username");
 				String passwordInDB = rs.getString("password");
